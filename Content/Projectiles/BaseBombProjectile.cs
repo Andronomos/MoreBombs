@@ -38,7 +38,7 @@ public class BaseBombProjectile : ModProjectile
 
     public void ExplodeAndPlaceTiles(int dustId, int tileId)
     {
-        //render the dirt particles
+        //render the block particles
         for (int i = 0; i < BlockParticleCount; i++)
         {
             int dustIndex = Dust.NewDust(Projectile.position, Projectile.width, Projectile.height, dustId);
