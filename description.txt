@@ -1,1 +1,16 @@
 Adds extra variants of the dirt bomb that explode and create other blocks such as snow, stone and mud.
+
+Below is a list of all the bombs added by this mod:
+
+[list]
+[*]Snow Bomb
+[*]Sticky Snow Bomb
+[*]Ash Bomb
+[*]Sticky Ash Bomb
+[*]Mud Bomb
+[*]Sticky Mud Bomb
+[*]Stone Bomb
+[*]Sticky Stone Bomb
+[*]Sand Bomb
+[*]Sticky Sand Bomb
+[/list]
