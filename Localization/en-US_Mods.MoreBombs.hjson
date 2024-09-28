@@ -1,0 +1,56 @@
+Items: {
+	SnowBomb: {
+		DisplayName: Snow Bomb
+		Tooltip: A small explosion that will spread snow
+	}
+
+	StickySnowBomb: {
+		DisplayName: Sticky Snow Bomb
+		Tooltip: A small explosion that will spread snow
+	}
+
+	MudBomb: {
+		DisplayName: Mud Bomb
+		Tooltip: A small explosion that will spread mud
+	}
+
+	StickyMudBomb: {
+		DisplayName: Sticky Mud Bomb
+		Tooltip: A small explosion that will spread mud
+	}
+
+	AshBomb: {
+		DisplayName: Ash Bomb
+		Tooltip: A small explosion that will spread ash
+	}
+
+	StickyAshBomb: {
+		DisplayName: Sticky Ash Bomb
+		Tooltip: A small explosion that will spread ash
+	}
+
+	StickyStoneBomb: {
+		DisplayName: Sticky Stone Bomb
+		Tooltip: A small explosion that will spread stone
+	}
+
+	StoneBomb: {
+		DisplayName: Stone Bomb
+		Tooltip: A small explosion that will spread stone
+	}
+}
+
+Projectiles: {
+	SnowBomb.DisplayName: Snow Bomb
+	SnowBombProjectile.DisplayName: Snow Bomb Projectile
+	StickySnowBombProjectile.DisplayName: Sticky Snow Bomb Projectile
+	MudBombProjectile.DisplayName: Mud Bomb Projectile
+	BaseBombProjectile.DisplayName: Base Bomb Projectile
+	AshBombProjectile.DisplayName: Ash Bomb Projectile
+	BaseStickyBombProjectile.DisplayName: Base Sticky Bomb Projectile
+	StickAshBombProjectile.DisplayName: Stick Ash Bomb Projectile
+	StickyMudBombProjectile.DisplayName: Sticky Mud Bomb Projectile
+	StickyAshBombProjectile.DisplayName: Sticky Ash Bomb Projectile
+	StickyStoneBombProjectile.DisplayName: Sticky Stone Bomb Projectile
+	StoneBombProjectile.DisplayName: Stone Bomb Projectile
+}

@@ -1,0 +1,1 @@
+Adds extra variants of the dirt bomb that explode and create other blocks such as snow, stone and mud.
