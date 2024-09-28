@@ -38,6 +38,16 @@ Items: {
 		DisplayName: Stone Bomb
 		Tooltip: A small explosion that will spread stone
 	}
+
+	SandBomb: {
+		DisplayName: Sand Bomb
+		Tooltip: ""
+	}
+
+	StickySandBomb: {
+		DisplayName: Sticky Sand Bomb
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -53,4 +63,6 @@ Projectiles: {
 	StickyAshBombProjectile.DisplayName: Sticky Ash Bomb Projectile
 	StickyStoneBombProjectile.DisplayName: Sticky Stone Bomb Projectile
 	StoneBombProjectile.DisplayName: Stone Bomb Projectile
+	SandBombProjectile.DisplayName: Sand Bomb Projectile
+	StickySandBombProjectile.DisplayName: Sticky Sand Bomb Projectile
 }
