@@ -15,7 +15,7 @@ public class StickyCloudBomb : ModItem
     public override void AddRecipes()
     {
         CreateRecipe(1)
-            .AddIngredient(ModContent.ItemType<SnowBomb>(), 1)
+            .AddIngredient(ModContent.ItemType<CloudBomb>(), 1)
             .AddIngredient(ItemID.Gel, 1)
             .AddTile(TileID.WorkBenches)
             .Register();
