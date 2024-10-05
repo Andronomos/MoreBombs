@@ -41,12 +41,22 @@ Items: {
 
 	SandBomb: {
 		DisplayName: Sand Bomb
-		Tooltip: ""
+		Tooltip: A small explosion that will spread sand
 	}
 
 	StickySandBomb: {
 		DisplayName: Sticky Sand Bomb
-		Tooltip: ""
+		Tooltip: A small explosion that will spread sand
+	}
+
+	CloudBomb: {
+		DisplayName: Cloud Bomb
+		Tooltip: A small explosion that will spread cloud
+	}
+
+	StickyCloudBomb: {
+		DisplayName: Sticky Cloud Bomb
+		Tooltip: A small explosion that will spread cloud
 	}
 }
 
@@ -65,4 +75,6 @@ Projectiles: {
 	StoneBombProjectile.DisplayName: Stone Bomb Projectile
 	SandBombProjectile.DisplayName: Sand Bomb Projectile
 	StickySandBombProjectile.DisplayName: Sticky Sand Bomb Projectile
+	CloudBombProjectile.DisplayName: Cloud Bomb Projectile
+	StickyCloudBombProjectile.DisplayName: Sticky Cloud Bomb Projectile
 }
