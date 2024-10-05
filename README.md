@@ -13,3 +13,5 @@ Below is a list of all the bombs added by this mod:
 - Sticky Stone Bomb
 - Sand Bomb
 - Sticky Sand Bomb
+- Cloud Bomb
+- Sticky Cloud Bomb
