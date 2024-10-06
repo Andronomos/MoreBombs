@@ -78,6 +78,26 @@ Items: {
 		DisplayName: Sticky Ebonsand Bomb
 		Tooltip: A small explosion that will spread ebonsand
 	}
+
+	PearlsandBomb: {
+		DisplayName: Pearlsand Bomb
+		Tooltip: A small explosion that will spread pearlsand
+	}
+
+	StickyPearlsandBomb: {
+		DisplayName: Sticky Pearlsand Bomb
+		Tooltip: A small explosion that will spread pearlsand
+	}
+
+	PearlstoneBomb: {
+		DisplayName: Pearlstone Bomb
+		Tooltip: A small explosion that will spread pearlstone
+	}
+
+	StickyPearlstoneBomb: {
+		DisplayName: Sticky Pearlstone Bomb
+		Tooltip: A small explosion that will spread pearlstone
+	}
 }
 
 Projectiles: {
@@ -112,4 +132,8 @@ Projectiles: {
 	StickyEbonstoneBomb.DisplayName: Sticky Ebonstone Bomb
 	EbonsandBomb.DisplayName: Ebonsand Bomb
 	StickyEbonsandBomb.DisplayName: Sticky Ebonsand Bomb
+	PearlsandBomb.DisplayName: Pearlsand Bomb
+	StickyPearlsandBomb.DisplayName: Sticky Pearlsand Bomb
+	PearlstoneBomb.DisplayName: Pearlstone Bomb
+	StickyPearlstoneBomb.DisplayName: Sticky Pearlstone Bomb
 }

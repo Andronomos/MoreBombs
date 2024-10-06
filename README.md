@@ -19,3 +19,7 @@ Below is a list of all the bombs added by this mod:
 - Sticky Ebonstone Bomb
 - Ebonssand Bomb
 - Sticky Ebonssand Bomb
+- Pearlsand Bomb
+- Sticky Pearlsand 
+- Pearlstone Bomb
+- Sticky Pearlstone Bomb
