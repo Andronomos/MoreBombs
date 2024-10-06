@@ -40,6 +40,6 @@ public class MoreBombs : Mod
 
         MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, true);
         AddContent(stickyProjectile);        
-        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, itemCount, stickyProjectile, true));
+        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, true));
     }
 }
