@@ -64,17 +64,28 @@ Projectiles: {
 	SnowBomb.DisplayName: Snow Bomb
 	SnowBombProjectile.DisplayName: Snow Bomb Projectile
 	StickySnowBombProjectile.DisplayName: Sticky Snow Bomb Projectile
+	StickySnowBomb.DisplayName: Sticky Snow Bomb
 	MudBombProjectile.DisplayName: Mud Bomb Projectile
+	MudBomb.DisplayName: Mud Bomb
 	BaseBombProjectile.DisplayName: Base Bomb Projectile
 	AshBombProjectile.DisplayName: Ash Bomb Projectile
+	AshBomb.DisplayName: Ash Bomb
 	BaseStickyBombProjectile.DisplayName: Base Sticky Bomb Projectile
 	StickAshBombProjectile.DisplayName: Stick Ash Bomb Projectile
 	StickyMudBombProjectile.DisplayName: Sticky Mud Bomb Projectile
+	StickyMudBomb.DisplayName: Sticky Mud Bomb
 	StickyAshBombProjectile.DisplayName: Sticky Ash Bomb Projectile
+	StickyAshBomb.DisplayName: Sticky Ash Bomb
 	StickyStoneBombProjectile.DisplayName: Sticky Stone Bomb Projectile
+	StickyStoneBomb.DisplayName: Sticky Stone Bomb
 	StoneBombProjectile.DisplayName: Stone Bomb Projectile
+	StoneBomb.DisplayName: Stone Bomb
 	SandBombProjectile.DisplayName: Sand Bomb Projectile
+	SandBomb.DisplayName: Sand Bomb
 	StickySandBombProjectile.DisplayName: Sticky Sand Bomb Projectile
+	StickySandBomb.DisplayName: Sticky Sand Bomb
 	CloudBombProjectile.DisplayName: Cloud Bomb Projectile
+	CloudBomb.DisplayName: Cloud Bomb
 	StickyCloudBombProjectile.DisplayName: Sticky Cloud Bomb Projectile
+	StickyCloudBomb.DisplayName: Sticky Cloud Bomb
 }
