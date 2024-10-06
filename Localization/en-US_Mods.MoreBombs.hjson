@@ -58,6 +58,26 @@ Items: {
 		DisplayName: Sticky Cloud Bomb
 		Tooltip: A small explosion that will spread cloud
 	}
+
+	EbonstoneBomb: {
+		DisplayName: Ebonstone Bomb
+		Tooltip: A small explosion that will spread ebonstone
+	}
+
+	StickyEbonstoneBomb: {
+		DisplayName: Sticky Ebonstone Bomb
+		Tooltip: A small explosion that will spread ebonstone
+	}
+
+	EbonsandBomb: {
+		DisplayName: Ebonsand Bomb
+		Tooltip: A small explosion that will spread ebonsand
+	}
+
+	StickyEbonsandBomb: {
+		DisplayName: Sticky Ebonsand Bomb
+		Tooltip: A small explosion that will spread ebonsand
+	}
 }
 
 Projectiles: {
@@ -88,4 +108,8 @@ Projectiles: {
 	CloudBomb.DisplayName: Cloud Bomb
 	StickyCloudBombProjectile.DisplayName: Sticky Cloud Bomb Projectile
 	StickyCloudBomb.DisplayName: Sticky Cloud Bomb
+	EbonstoneBomb.DisplayName: Ebonstone Bomb
+	StickyEbonstoneBomb.DisplayName: Sticky Ebonstone Bomb
+	EbonsandBomb.DisplayName: Ebonsand Bomb
+	StickyEbonsandBomb.DisplayName: Sticky Ebonsand Bomb
 }

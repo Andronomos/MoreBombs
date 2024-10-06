@@ -15,3 +15,7 @@ Below is a list of all the bombs added by this mod:
 - Sticky Sand Bomb
 - Cloud Bomb
 - Sticky Cloud Bomb
+- Ebonstone Bomb
+- Sticky Ebonstone Bomb
+- Ebonssand Bomb
+- Sticky Ebonssand Bomb
