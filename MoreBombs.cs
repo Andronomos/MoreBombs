@@ -30,19 +30,18 @@ public class MoreBombs : Mod
     /// <param name="tileId">The tile produced by the explosion</param>
     /// <param name="dustId">The dust produces by the explosion</param>
     /// <param name="itemCount">The number of items used in the recipe</param>
-    /// <param name="isSticky">If the bomb is sticky</param>
     public void CreateBomb(string name, int itemId, ushort tileId, short dustId, int itemCount = 25)
     {
         string bombName = $"{name}Bomb";
         string stickyBombName = $"Sticky{bombName}";
 
-        MoreBombsProjectile projectile = new(bombName, tileId, dustId, false);
+        MoreBombsProjectile projectile = new(bombName, tileId, dustId, isSticky: false);
         AddContent(projectile);
-        MoreBombsItem bombItem = new(bombName, itemId, itemCount, projectile, false);
+        MoreBombsItem bombItem = new(bombName, itemId, itemCount, projectile, isSticky: false);
         AddContent(bombItem);
 
-        MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, true);
+        MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, isSticky: true);
         AddContent(stickyProjectile);        
-        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, true));
+        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, isSticky: true));
     }
 }
