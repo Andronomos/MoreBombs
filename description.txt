@@ -1,6 +1,6 @@
 A Terraria mod that adds extra bombs that create other blocks when they explode, similar to the dirt bomb. Useful for patching holes while building or creating custom terrain.
 
-Below is a list of blocks this mod adds regular and sticky bomb variants for:\
+Below is a list of blocks this mod adds regular and sticky bomb variants for:
 [list]
 [*]Snow
 [*]Ash
