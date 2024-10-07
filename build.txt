@@ -1,4 +1,4 @@
 displayName = More Bombs
 author = Andronomos
-version = 0.5
+version = 0.6
 homepage = https://github.com/Andronomos/MoreBombs

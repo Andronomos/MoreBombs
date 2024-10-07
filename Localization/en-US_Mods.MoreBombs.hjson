@@ -98,6 +98,16 @@ Items: {
 		DisplayName: Sticky Pearlstone Bomb
 		Tooltip: A small explosion that will spread pearlstone
 	}
+
+	CrimstoneBomb: {
+		DisplayName: Crimstone Bomb
+		Tooltip: A small explosion that will spread crimstone
+	}
+
+	StickyCrimstoneBomb: {
+		DisplayName: Sticky Crimstone Bomb
+		Tooltip: A small explosion that will spread crimstone
+	}
 }
 
 Projectiles: {
@@ -136,4 +146,6 @@ Projectiles: {
 	StickyPearlsandBomb.DisplayName: Sticky Pearlsand Bomb
 	PearlstoneBomb.DisplayName: Pearlstone Bomb
 	StickyPearlstoneBomb.DisplayName: Sticky Pearlstone Bomb
+	CrimstoneBomb.DisplayName: Crimstone Bomb
+	StickyCrimstoneBomb.DisplayName: Sticky Crimstone Bomb
 }

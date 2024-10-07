@@ -23,3 +23,5 @@ Below is a list of all the bombs added by this mod:
 - Sticky Pearlsand 
 - Pearlstone Bomb
 - Sticky Pearlstone Bomb
+- Crimstone Bomb
+- Sticky Crimstone Bomb
