@@ -1,27 +1,17 @@
 # MoreBombs
-A Terraria mod that adds extra bombs that create other blocks when they explode, similar to the dirt bomb.
+A Terraria mod that adds extra bombs that create other blocks when they explode, similar to the dirt bomb. Useful for patching holes while building or creating custom terrain.
 
-Below is a list of all the bombs added by this mod:
 
-- Snow Bomb
-- Sticky Snow Bomb
-- Ash Bomb
-- Sticky Ash Bomb
-- Mud Bomb
-- Sticky Mud Bomb
-- Stone Bomb
-- Sticky Stone Bomb
-- Sand Bomb
-- Sticky Sand Bomb
-- Cloud Bomb
-- Sticky Cloud Bomb
-- Ebonstone Bomb
-- Sticky Ebonstone Bomb
-- Ebonssand Bomb
-- Sticky Ebonssand Bomb
-- Pearlsand Bomb
-- Sticky Pearlsand 
-- Pearlstone Bomb
-- Sticky Pearlstone Bomb
-- Crimstone Bomb
-- Sticky Crimstone Bomb
+Below is a list of blocks this mod adds regular and sticky bomb variants for:\
+
+- Snow
+- Ash
+- Mud
+- Stone
+- Sand
+- Cloud
+- Ebonstone
+- Ebonsand
+- Pearlsand
+- Pearlstone
+- Crimstone
