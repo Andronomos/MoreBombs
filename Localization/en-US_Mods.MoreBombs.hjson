@@ -111,57 +111,101 @@ Items: {
 
 	BouncySnowBomb: {
 		DisplayName: Bouncy Snow Bomb
-		Tooltip: "A small explosion that will spread snow \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread snow 
+			Very bouncy
+			'''
 	}
 
 	BouncyMudBomb: {
 		DisplayName: Bouncy Mud Bomb
-		Tooltip: "A small explosion that will spread mud \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread mud 
+			Very bouncy
+			'''
 	}
 
 	BouncyAshBomb: {
 		DisplayName: Bouncy Ash Bomb
-		Tooltip: "A small explosion that will spread ash \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread ash 
+			Very bouncy
+			'''
 	}
 
 	BouncyStoneBomb: {
 		DisplayName: Bouncy Stone Bomb
-		Tooltip: "A small explosion that will spread stone \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread stone 
+			Very bouncy
+			'''
 	}
 
 	BouncySandBomb: {
 		DisplayName: Bouncy Sand Bomb
-		Tooltip: "A small explosion that will spread sand \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread sand 
+			Very bouncy
+			'''
 	}
 
 	BouncyCloudBomb: {
 		DisplayName: Bouncy Cloud Bomb
-		Tooltip: "A small explosion that will spread cloud \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread cloud 
+			Very bouncy
+			'''
 	}
 
 	BouncyEbonstoneBomb: {
 		DisplayName: Bouncy Ebonstone Bomb
-		Tooltip: "A small explosion that will spread ebonstone \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread ebonstone 
+			Very bouncy
+			'''
 	}
 
 	BouncyEbonsandBomb: {
 		DisplayName: Bouncy Ebonsand Bomb
-		Tooltip: "A small explosion that will spread ebonsand \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread ebonsand 
+			Very bouncy
+			'''
 	}
 
 	BouncyPearlsandBomb: {
 		DisplayName: Bouncy Pearlsand Bomb
-		Tooltip: "A small explosion that will spread pearlsand \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread pearlsand 
+			Very bouncy
+			'''
 	}
 
 	BouncyPearlstoneBomb: {
 		DisplayName: Bouncy Pearlstone Bomb
-		Tooltip: "A small explosion that will spread pearlstone \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread pearlstone 
+			Very bouncy
+			'''
 	}
 
 	BouncyCrimstoneBomb: {
 		DisplayName: Bouncy Crimstone Bomb
-		Tooltip: "A small explosion that will spread crimstone \nVery bouncy"
+		Tooltip:
+			'''
+			A small explosion that will spread crimstone 
+			Very bouncy
+			'''
 	}
 }
 
