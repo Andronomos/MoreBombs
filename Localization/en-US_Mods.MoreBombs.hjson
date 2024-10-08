@@ -108,6 +108,61 @@ Items: {
 		DisplayName: Sticky Crimstone Bomb
 		Tooltip: A small explosion that will spread crimstone
 	}
+
+	BouncySnowBomb: {
+		DisplayName: Bouncy Snow Bomb
+		Tooltip: "A small explosion that will spread snow \nVery bouncy"
+	}
+
+	BouncyMudBomb: {
+		DisplayName: Bouncy Mud Bomb
+		Tooltip: "A small explosion that will spread mud \nVery bouncy"
+	}
+
+	BouncyAshBomb: {
+		DisplayName: Bouncy Ash Bomb
+		Tooltip: "A small explosion that will spread ash \nVery bouncy"
+	}
+
+	BouncyStoneBomb: {
+		DisplayName: Bouncy Stone Bomb
+		Tooltip: "A small explosion that will spread stone \nVery bouncy"
+	}
+
+	BouncySandBomb: {
+		DisplayName: Bouncy Sand Bomb
+		Tooltip: "A small explosion that will spread sand \nVery bouncy"
+	}
+
+	BouncyCloudBomb: {
+		DisplayName: Bouncy Cloud Bomb
+		Tooltip: "A small explosion that will spread cloud \nVery bouncy"
+	}
+
+	BouncyEbonstoneBomb: {
+		DisplayName: Bouncy Ebonstone Bomb
+		Tooltip: "A small explosion that will spread ebonstone \nVery bouncy"
+	}
+
+	BouncyEbonsandBomb: {
+		DisplayName: Bouncy Ebonsand Bomb
+		Tooltip: "A small explosion that will spread ebonsand \nVery bouncy"
+	}
+
+	BouncyPearlsandBomb: {
+		DisplayName: Bouncy Pearlsand Bomb
+		Tooltip: "A small explosion that will spread pearlsand \nVery bouncy"
+	}
+
+	BouncyPearlstoneBomb: {
+		DisplayName: Bouncy Pearlstone Bomb
+		Tooltip: "A small explosion that will spread pearlstone \nVery bouncy"
+	}
+
+	BouncyCrimstoneBomb: {
+		DisplayName: Bouncy Crimstone Bomb
+		Tooltip: "A small explosion that will spread crimstone \nVery bouncy"
+	}
 }
 
 Projectiles: {
@@ -148,4 +203,15 @@ Projectiles: {
 	StickyPearlstoneBomb.DisplayName: Sticky Pearlstone Bomb
 	CrimstoneBomb.DisplayName: Crimstone Bomb
 	StickyCrimstoneBomb.DisplayName: Sticky Crimstone Bomb
+	BouncySnowBomb.DisplayName: Bouncy Snow Bomb
+	BouncyAshBomb.DisplayName: Bouncy Ash Bomb
+	BouncyCloudBomb.DisplayName: Bouncy Cloud Bomb
+	BouncyMudBomb.DisplayName: Bouncy Mud Bomb
+	BouncySandBomb.DisplayName: Bouncy Sand Bomb
+	BouncyStoneBomb.DisplayName: Bouncy Stone Bomb
+	BouncyEbonstoneBomb.DisplayName: Bouncy Ebonstone Bomb
+	BouncyEbonsandBomb.DisplayName: Bouncy Ebonsand Bomb
+	BouncyPearlsandBomb.DisplayName: Bouncy Pearlsand Bomb
+	BouncyPearlstoneBomb.DisplayName: Bouncy Pearlstone Bomb
+	BouncyCrimstoneBomb.DisplayName: Bouncy Crimstone Bomb
 }
