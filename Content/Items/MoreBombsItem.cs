@@ -4,12 +4,19 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Items;
 
-public class MoreBombsItem(string name, int itemId, int itemCount, ModProjectile projectile, bool isSticky) : ModItem
+public enum BombType
+{
+    Normal,
+    Sticky,
+    Bouncy
+}
+
+public class MoreBombsItem(string name, int itemId, int itemCount, ModProjectile projectile, BombType type) : ModItem
 {
     private readonly int _materialId = itemId;
     private readonly int _materialCount = itemCount;
     private readonly ModProjectile _projectile = projectile;
-    private readonly bool _isSticky = isSticky;
+    private readonly BombType _type = type;
 
     public override string Name { get; } = name;
 
@@ -17,16 +24,45 @@ public class MoreBombsItem(string name, int itemId, int itemCount, ModProjectile
 
     public override void SetDefaults()
     {
-        Item.CloneDefaults(_isSticky ? ItemID.DirtStickyBomb : ItemID.DirtBomb);
+        switch (_type)
+        {
+            case BombType.Normal:
+                Item.CloneDefaults(ItemID.DirtBomb);
+                break;
+
+            case BombType.Sticky:
+                Item.CloneDefaults(ItemID.DirtStickyBomb);
+                break;
+
+            case BombType.Bouncy:
+                Item.CloneDefaults(ItemID.BouncyBomb);
+                break;
+        }
+
         Item.shoot = _projectile.Type;
     }
 
     public override void AddRecipes()
     {
-        CreateRecipe(1)
+        Recipe recipe = CreateRecipe(1)
             .AddIngredient(_materialId, _materialCount)
-            .AddIngredient(_isSticky ? ItemID.Gel : ItemID.Bomb, 1)
-            .AddTile(TileID.WorkBenches)
-            .Register();
+            .AddTile(TileID.WorkBenches);
+
+        switch (_type)
+        {
+            case BombType.Normal:
+                recipe.AddIngredient(ItemID.Bomb, 1);
+                break;
+
+            case BombType.Sticky:
+                recipe.AddIngredient(ItemID.Gel, 1);
+                break;
+
+            case BombType.Bouncy:
+                recipe.AddIngredient(ItemID.PinkGel, 1);
+                break;
+        }
+
+        recipe.Register();
     }
 }

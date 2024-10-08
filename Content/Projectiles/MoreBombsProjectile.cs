@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using MoreBombs.Content.Items;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
@@ -6,14 +7,14 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Projectiles;
 
-public class MoreBombsProjectile(string name, ushort tileId, short dustId, bool isSticky) : ModProjectile
+public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombType type) : ModProjectile
 {
     private const int DustParticleCount = 30;
     private const int BlockParticleCount = 80;
     private const int ExplosionRadius = 4;
     private readonly ushort _tileId = tileId;
     private readonly short _dustId = dustId;
-    private readonly bool _isSticky = isSticky;
+    private readonly BombType _type = type;
 
     public override string Name { get; } = name;
 
@@ -23,13 +24,20 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, bool 
 
     public override void SetDefaults()
     {
-        if (_isSticky)
+        switch (_type)
         {
-            Projectile.CloneDefaults(ProjectileID.DirtStickyBomb);
-            Projectile.tileCollide = true;
-        } else
-        {
-            Projectile.CloneDefaults(ProjectileID.DirtBomb);            
+            case BombType.Normal:
+                Projectile.CloneDefaults(ProjectileID.DirtBomb);
+                break;
+
+            case BombType.Sticky:
+                Projectile.CloneDefaults(ProjectileID.DirtStickyBomb);
+                Projectile.tileCollide = true;
+                break;
+
+            case BombType.Bouncy:
+                Projectile.CloneDefaults(ProjectileID.BouncyBomb);
+                break;
         }
 
         Projectile.timeLeft = 180;
@@ -37,11 +45,26 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, bool 
 
     public override bool OnTileCollide(Vector2 oldVelocity)
     {
-        if (_isSticky)
+        if (_type == BombType.Sticky)
         {
             Projectile.velocity = Vector2.Zero;
             Projectile.aiStyle = 0;
             return false;
+        }
+
+        if (_type == BombType.Bouncy)
+        {
+            if (Projectile.velocity.X != oldVelocity.X)
+            {
+                Projectile.velocity.X = -oldVelocity.X;
+            }
+
+            if (Projectile.velocity.Y != oldVelocity.Y)
+            {
+                Projectile.velocity.Y = -oldVelocity.Y;
+            }
+
+            return false; // Prevents the projectile from being destroyed
         }
 
         return true;

@@ -34,14 +34,19 @@ public class MoreBombs : Mod
     {
         string bombName = $"{name}Bomb";
         string stickyBombName = $"Sticky{bombName}";
+        string bouncyBombName = $"Bouncy{bombName}";
 
-        MoreBombsProjectile projectile = new(bombName, tileId, dustId, isSticky: false);
+        MoreBombsProjectile projectile = new(bombName, tileId, dustId, BombType.Normal);
         AddContent(projectile);
-        MoreBombsItem bombItem = new(bombName, itemId, itemCount, projectile, isSticky: false);
+        MoreBombsItem bombItem = new(bombName, itemId, itemCount, projectile, BombType.Normal);
         AddContent(bombItem);
 
-        MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, isSticky: true);
+        MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, BombType.Sticky);
         AddContent(stickyProjectile);        
-        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, isSticky: true));
+        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, BombType.Sticky));
+
+        MoreBombsProjectile bouncyProjectile = new(bouncyBombName, tileId, dustId, BombType.Bouncy);
+        AddContent(bouncyProjectile);
+        AddContent(new MoreBombsItem(bouncyBombName, bombItem.Type, 1, bouncyProjectile, BombType.Bouncy));
     }
 }
