@@ -220,7 +220,7 @@ Items: {
 
 	BouncyCrimsandBomb: {
 		DisplayName: Bouncy Crimsand Bomb
-		Tooltip: 
+		Tooltip:
 			'''
 			A small explosion that will spread crimsand 
 			Very bouncy
