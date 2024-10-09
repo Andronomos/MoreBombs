@@ -207,6 +207,25 @@ Items: {
 			Very bouncy
 			'''
 	}
+
+	CrimsandBomb: {
+		DisplayName: Crimsand Bomb
+		Tooltip: A small explosion that will spread crimsand
+	}
+
+	StickyCrimsandBomb: {
+		DisplayName: Sticky Crimsand Bomb
+		Tooltip: A small explosion that will spread crimsand
+	}
+
+	BouncyCrimsandBomb: {
+		DisplayName: Bouncy Crimsand Bomb
+		Tooltip: 
+			'''
+			A small explosion that will spread crimsand 
+			Very bouncy
+			'''
+	}
 }
 
 Projectiles: {
@@ -258,4 +277,7 @@ Projectiles: {
 	BouncyPearlsandBomb.DisplayName: Bouncy Pearlsand Bomb
 	BouncyPearlstoneBomb.DisplayName: Bouncy Pearlstone Bomb
 	BouncyCrimstoneBomb.DisplayName: Bouncy Crimstone Bomb
+	CrimsandBomb.DisplayName: Crimsand Bomb
+	StickyCrimsandBomb.DisplayName: Sticky Crimsand Bomb
+	BouncyCrimsandBomb.DisplayName: Bouncy Crimsand Bomb
 }

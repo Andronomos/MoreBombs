@@ -20,6 +20,7 @@ public class MoreBombs : Mod
         CreateBomb("Pearlsand", ItemID.PearlsandBlock, TileID.Pearlsand, DustID.Pearlsand);
         CreateBomb("Pearlstone", ItemID.PearlstoneBlock, TileID.Pearlstone, DustID.Sand);
         CreateBomb("Crimstone", ItemID.CrimstoneBlock, TileID.Crimstone, DustID.Crimstone);
+        CreateBomb("Crimsand", ItemID.CrimsandBlock, TileID.Crimsand, DustID.Crimstone);
     }
 
     /// <summary>

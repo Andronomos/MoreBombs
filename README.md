@@ -15,3 +15,4 @@ Below is a list of blocks this mod adds regular, sticky and bouncy bomb variants
 - Pearlsand
 - Pearlstone
 - Crimstone
+- CrimSand
