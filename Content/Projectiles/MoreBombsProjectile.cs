@@ -1,11 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using MoreBombs.Content.Items;
-using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace MoreBombs.Content.Projectiles;
 
@@ -13,6 +11,10 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
 {
     private const int DustParticleCount = 30;
     private const int BlockParticleCount = 80;
+    private const int ExplosionRadius = 4;
+    private readonly ushort _tileId = tileId;
+    private readonly short _dustId = dustId;
+    private readonly BombType _type = type;
 
     public override string Name { get; } = name;
 
@@ -22,7 +24,7 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
 
     public override void SetDefaults()
     {
-        switch (type)
+        switch (_type)
         {
             case BombType.Normal:
                 Projectile.CloneDefaults(ProjectileID.DirtBomb);
@@ -43,14 +45,14 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
 
     public override bool OnTileCollide(Vector2 oldVelocity)
     {
-        if (type == BombType.Sticky)
+        if (_type == BombType.Sticky)
         {
             Projectile.velocity = Vector2.Zero;
             Projectile.aiStyle = 0;
             return false;
         }
 
-        if (type == BombType.Bouncy)
+        if (_type == BombType.Bouncy)
         {
             if (Projectile.velocity.X != oldVelocity.X)
             {
@@ -83,7 +85,7 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
             dust2.velocity *= 1.4f;
         }
 
-        ExplodeAndPlaceTiles(dustId, tileId);
+        ExplodeAndPlaceTiles(_dustId, _tileId);
     }
 
     public void ExplodeAndPlaceTiles(int dustId, int tileId)
@@ -99,27 +101,8 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
         {
             return;
         }
-      
-        PlaceTiles(tileId);         
-    }
 
-    public (int, int) CalculateRadiusValues(int desiredRadius)
-    {
-        if (desiredRadius <= 0)
-        {
-            desiredRadius = 2;
-        }
-
-        int minRadius = desiredRadius / 2;
-        int maxRadius = minRadius;
-
-        //if the desired radius is an odd number, add 1 to the radius to account for 0
-        if (desiredRadius % 2 != 0)
-        {
-            maxRadius += 1;
-        }
-
-        return (minRadius, maxRadius);
+        PlaceTilesInCircle(tileId);
     }
 
     public bool PlayerInTheWay()
@@ -135,27 +118,32 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
         return false;
     }
 
-    private void PlaceTiles(int tileId)
+    private void PlaceTilesInSquare(int tileId)
     {
-        (int minWidth, int maxWidth) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionWidth);
-        (int miHeight, int maxHeight) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionHeight);
-
-        for (int x = -minWidth; x < maxWidth; x++)
+        for (int x = -ExplosionRadius; x <= ExplosionRadius; x++)
         {
-            for (int y = -miHeight; y < maxHeight; y++)
+            for (int y = -ExplosionRadius; y <= ExplosionRadius; y++)
             {
                 int tileX = (int)(Projectile.position.X / 16f) + x;
                 int tileY = (int)(Projectile.position.Y / 16f) + y;
-
-                if (ModContent.GetInstance<Config>().CircleExplosion)
-                {
-                    if ((x * x) + (y * y) > minWidth * minWidth) // Check if within circle
-                    {
-                        continue;
-                    }
-                }
-
                 WorldGen.PlaceTile(tileX, tileY, tileId);
+            }
+        }
+    }
+
+    private void PlaceTilesInCircle(int tileId)
+    {
+        for (int x = -ExplosionRadius; x <= ExplosionRadius; x++)
+        {
+            for (int y = -ExplosionRadius; y <= ExplosionRadius; y++)
+            {
+                if (x * x + y * y <= ExplosionRadius * ExplosionRadius) // Check if within circle
+                {
+                    int tileX = (int)(Projectile.position.X / 16f) + x;
+                    int tileY = (int)(Projectile.position.Y / 16f) + y;
+
+                    WorldGen.PlaceTile(tileX, tileY, tileId);
+                }
             }
         }
     }
