@@ -9,6 +9,9 @@ public class MoreBombs : Mod
 {
     public override void Load()
     {
+        //This bomb only exists because you can't apply the config settings to the vanilla dirt bomb
+        CreateBomb("Dirt", ItemID.DirtBlock, TileID.Dirt, DustID.Dirt);
+
         CreateBomb("Snow", ItemID.SnowBlock, TileID.SnowBlock, DustID.SnowBlock);
         CreateBomb("Ash", ItemID.AshBlock, TileID.Ash, DustID.Ash);
         CreateBomb("Cloud", ItemID.Cloud, TileID.Cloud, DustID.Cloud);

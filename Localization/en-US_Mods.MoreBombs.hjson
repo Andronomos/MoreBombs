@@ -226,6 +226,21 @@ Items: {
 			Very bouncy
 			'''
 	}
+
+	DirtBomb: {
+		DisplayName: Dirt Bomb
+		Tooltip: ""
+	}
+
+	StickyDirtBomb: {
+		DisplayName: Sticky Dirt Bomb
+		Tooltip: ""
+	}
+
+	BouncyDirtBomb: {
+		DisplayName: Bouncy Dirt Bomb
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -280,6 +295,9 @@ Projectiles: {
 	CrimsandBomb.DisplayName: Crimsand Bomb
 	StickyCrimsandBomb.DisplayName: Sticky Crimsand Bomb
 	BouncyCrimsandBomb.DisplayName: Bouncy Crimsand Bomb
+	DirtBomb.DisplayName: Dirt Bomb
+	StickyDirtBomb.DisplayName: Sticky Dirt Bomb
+	BouncyDirtBomb.DisplayName: Bouncy Dirt Bomb
 }
 
 Configs: {

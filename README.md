@@ -3,6 +3,7 @@ A Terraria mod that adds extra bombs that create other blocks when they explode,
 
 
 #### Below is a list of blocks this mod adds regular, sticky and bouncy bomb variants for:
+- Dirt (This bomb only exists because you can't apply the config settings to the vanilla dirt bomb)
 - Snow
 - Ash
 - Mud

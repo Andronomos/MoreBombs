@@ -60,7 +60,7 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
                 Projectile.velocity.Y = -oldVelocity.Y;
             }
 
-            return false; // Prevents the projectile from being destroyed
+            return false;
         }
 
         return true;
