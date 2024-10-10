@@ -299,16 +299,11 @@ Configs: {
 
 		CircleExplosion: {
 			Label: Circle Explosion
-			Tooltip: 
-			'''
-			If enabled, bombs will create blocks in a circle instead of a sqaure. 
-			Note: The explosion width and height should be near equal when enabled.
-			'''
-		}
-
-		ExplosionWidth: {
-			Label: Explosion Width
-			Tooltip: ""
+			Tooltip:
+				'''
+				If enabled, bombs will create blocks in a circle instead of a sqaure. 
+				Note: The explosion width and height should be near equal when enabled.
+				'''
 		}
 	}
 }
