@@ -98,7 +98,27 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
             return;
         }
 
-        PlaceTiles(tileId);
+        (int minWidth, int maxWidth) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionWidth);
+        (int miHeight, int maxHeight) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionHeight);
+
+        for (int x = -minWidth; x < maxWidth; x++)
+        {
+            for (int y = -miHeight; y < maxHeight; y++)
+            {
+                int tileX = (int)(Projectile.position.X / 16f) + x;
+                int tileY = (int)(Projectile.position.Y / 16f) + y;
+
+                if (ModContent.GetInstance<Config>().CircleExplosion)
+                {
+                    if ((x * x) + (y * y) > minWidth * minWidth) // Check if within circle
+                    {
+                        continue;
+                    }
+                }
+
+                WorldGen.PlaceTile(tileX, tileY, tileId);
+            }
+        }
     }
 
     public (int, int) CalculateRadiusValues(int desiredRadius)
@@ -131,30 +151,5 @@ public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombT
         }
 
         return false;
-    }
-
-    private void PlaceTiles(int tileId)
-    {
-        (int minWidth, int maxWidth) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionWidth);
-        (int miHeight, int maxHeight) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionHeight);
-
-        for (int x = -minWidth; x < maxWidth; x++)
-        {
-            for (int y = -miHeight; y < maxHeight; y++)
-            {
-                int tileX = (int)(Projectile.position.X / 16f) + x;
-                int tileY = (int)(Projectile.position.Y / 16f) + y;
-
-                if (ModContent.GetInstance<Config>().CircleExplosion)
-                {
-                    if ((x * x) + (y * y) > minWidth * minWidth) // Check if within circle
-                    {
-                        continue;
-                    }
-                }
-
-                WorldGen.PlaceTile(tileX, tileY, tileId);
-            }
-        }
     }
 }
