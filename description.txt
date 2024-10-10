@@ -19,15 +19,15 @@ A Terraria mod that adds extra bombs that create other blocks when they explode,
 
 [h3]Configuration options:[/h3]
 [list]
-[*]- Explosion Width: Controls the maximum width of the explosion radius (default is 9)
-[*]- Explosion Height: Controls the maximum height of the explosion radius (default is 9)
-[*]- CircleExplosion: When enabled, tiles are placed in a circular shape, otherwise a square. It is recommended to use the same width and height values when this is enabled to
+[*]Explosion Width: Controls the maximum width of the explosion radius (default is 9)
+[*]Explosion Height: Controls the maximum height of the explosion radius (default is 9)
+[*]CircleExplosion: When enabled, tiles are placed in a circular shape, otherwise a square. It is recommended to use the same width and height values when this is enabled to
 avoid unexpected results.
 [/list]
 
 [h3]Notes:[/h3]
 [list]
-[*]- Changing the width and height of the explosion does not change the amount of blocks needed in the recipe. It is possible to unbalance the game by using high values to 
+[*]Changing the width and height of the explosion does not change the amount of blocks needed in the recipe. It is possible to unbalance the game by using high values to 
 get a lot more blocks back then you spent.
 [/list]
 
