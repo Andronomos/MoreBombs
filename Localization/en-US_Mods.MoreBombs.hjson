@@ -281,3 +281,34 @@ Projectiles: {
 	StickyCrimsandBomb.DisplayName: Sticky Crimsand Bomb
 	BouncyCrimsandBomb.DisplayName: Bouncy Crimsand Bomb
 }
+
+Configs: {
+	Config: {
+		DisplayName: Config
+		Headers.Bombs: Bomb Settings
+
+		ExplosionWidth: {
+			Label: Explosion Width
+			Tooltip: The width of the explosion.
+		}
+
+		ExplosionHeight: {
+			Label: Explosion Height
+			Tooltip: The height of the explosion.
+		}
+
+		CircleExplosion: {
+			Label: Circle Explosion
+			Tooltip: 
+			'''
+			If enabled, bombs will create blocks in a circle instead of a sqaure. 
+			Note: The explosion width and height should be near equal when enabled.
+			'''
+		}
+
+		ExplosionWidth: {
+			Label: Explosion Width
+			Tooltip: ""
+		}
+	}
+}
