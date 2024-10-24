@@ -241,6 +241,21 @@ Items: {
 		DisplayName: Bouncy Dirt Bomb
 		Tooltip: ""
 	}
+
+	DirtDynamite: {
+		DisplayName: Dirt Dynamite
+		Tooltip: ""
+	}
+
+	StickyDirtDynamite: {
+		DisplayName: Sticky Dirt Dynamite
+		Tooltip: ""
+	}
+
+	BouncyDirtDynamite: {
+		DisplayName: Bouncy Dirt Dynamite
+		Tooltip: ""
+	}
 }
 
 Projectiles: {
@@ -298,21 +313,19 @@ Projectiles: {
 	DirtBomb.DisplayName: Dirt Bomb
 	StickyDirtBomb.DisplayName: Sticky Dirt Bomb
 	BouncyDirtBomb.DisplayName: Bouncy Dirt Bomb
+	DirtDynamite.DisplayName: Dirt Dynamite
+	StickyDirtDynamite.DisplayName: Sticky Dirt Dynamite
+	BouncyDirtDynamite.DisplayName: Bouncy Dirt Dynamite
 }
 
 Configs: {
 	Config: {
 		DisplayName: Config
-		Headers.Bombs: Bomb Settings
 
-		ExplosionWidth: {
-			Label: Explosion Width
-			Tooltip: The width of the explosion.
-		}
-
-		ExplosionHeight: {
-			Label: Explosion Height
-			Tooltip: The height of the explosion.
+		Headers: {
+			Bombs: Bomb Settings
+			General: General Settings
+			Dynamite: Dynamite Settings
 		}
 
 		CircleExplosion: {
@@ -322,6 +335,26 @@ Configs: {
 				If enabled, bombs will create blocks in a circle instead of a sqaure. 
 				Note: The explosion width and height should be near equal when enabled.
 				'''
+		}
+
+		BombExplosionWidth: {
+			Label: Bomb Explosion Width
+			Tooltip: ""
+		}
+
+		BombExplosionHeight: {
+			Label: Bomb Explosion Height
+			Tooltip: ""
+		}
+
+		DynamiteExplosionWidth: {
+			Label: Dynamite Explosion Width
+			Tooltip: ""
+		}
+
+		DynamiteExplosionHeight: {
+			Label: Dynamite Explosion Height
+			Tooltip: ""
 		}
 	}
 }
