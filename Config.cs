@@ -9,11 +9,21 @@ public class Config : ModConfig
 
     [Header("Bombs")]
     [DefaultValue(9)]
-    public int ExplosionWidth;
+    public int BombExplosionWidth;
 
     [DefaultValue(9)]
-    public int ExplosionHeight;
+    public int BombExplosionHeight;
 
     [DefaultValue(true)]
-    public bool CircleExplosion;
+    public bool BombCircleExplosion;
+
+    [Header("Dynamite")]
+    [DefaultValue(9)]
+    public int DynamiteExplosionWidth;
+
+    [DefaultValue(9)]
+    public int DynamiteExplosionHeight;
+
+    [DefaultValue(true)]
+    public bool DynamiteCircleExplosion;
 }
