@@ -15,17 +15,29 @@ public class MoreBombs : Mod
         CreateDynamite("Dirt", ItemID.DirtBlock, TileID.Dirt, DustID.Dirt);
 
         CreateBomb("Snow", ItemID.SnowBlock, TileID.SnowBlock, DustID.SnowBlock);
+        CreateDynamite("Snow", ItemID.SnowBlock, TileID.SnowBlock, DustID.SnowBlock);
         CreateBomb("Ash", ItemID.AshBlock, TileID.Ash, DustID.Ash);
+        CreateDynamite("Ash", ItemID.AshBlock, TileID.Ash, DustID.Ash);
         CreateBomb("Cloud", ItemID.Cloud, TileID.Cloud, DustID.Cloud);
+        CreateDynamite("Cloud", ItemID.Cloud, TileID.Cloud, DustID.Cloud);
         CreateBomb("Mud", ItemID.MudBlock, TileID.Mud, DustID.Mud);
+        CreateDynamite("Mud", ItemID.MudBlock, TileID.Mud, DustID.Mud);
         CreateBomb("Sand", ItemID.SandBlock, TileID.Sand, DustID.Sand);
+        CreateDynamite("Sand", ItemID.SandBlock, TileID.Sand, DustID.Sand);
         CreateBomb("Stone", ItemID.StoneBlock, TileID.Stone, DustID.Stone);
+        CreateDynamite("Stone", ItemID.StoneBlock, TileID.Stone, DustID.Stone);
         CreateBomb("Ebonstone", ItemID.EbonstoneBlock, TileID.Ebonstone, DustID.Stone);
+        CreateDynamite("Ebonstone", ItemID.EbonstoneBlock, TileID.Ebonstone, DustID.Stone);
         CreateBomb("Ebonsand", ItemID.EbonsandBlock, TileID.Ebonsand, DustID.Sand);
+        CreateDynamite("Ebonsand", ItemID.EbonsandBlock, TileID.Ebonsand, DustID.Sand);
         CreateBomb("Pearlsand", ItemID.PearlsandBlock, TileID.Pearlsand, DustID.Pearlsand);
+        CreateDynamite("Pearlsand", ItemID.PearlsandBlock, TileID.Pearlsand, DustID.Pearlsand);
         CreateBomb("Pearlstone", ItemID.PearlstoneBlock, TileID.Pearlstone, DustID.Sand);
+        CreateDynamite("Pearlstone", ItemID.PearlstoneBlock, TileID.Pearlstone, DustID.Sand);
         CreateBomb("Crimstone", ItemID.CrimstoneBlock, TileID.Crimstone, DustID.Crimstone);
+        CreateDynamite("Crimstone", ItemID.CrimstoneBlock, TileID.Crimstone, DustID.Crimstone);
         CreateBomb("Crimsand", ItemID.CrimsandBlock, TileID.Crimsand, DustID.Crimstone);
+        CreateDynamite("Crimsand", ItemID.CrimsandBlock, TileID.Crimsand, DustID.Crimstone);
     }
 
     /// <summary>
