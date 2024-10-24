@@ -7,7 +7,7 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Projectiles;
 
-public class MoreBombsProjectile(string name, ushort tileId, short dustId, BombType type) : ModProjectile
+public class BlockBombProjectile(string name, ushort tileId, short dustId, BombType type) : ModProjectile
 {
     private const int DustParticleCount = 30;
     private const int BlockParticleCount = 80;
