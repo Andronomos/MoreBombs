@@ -4,7 +4,7 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Items;
 
-public class MoreBombsItem(string name, int materialId, int materialCount, ModProjectile projectile, BombType type) : ModItem
+public class BlockBombItem(string name, int materialId, int materialCount, ModProjectile projectile, BombType type) : ModItem
 {
     private readonly int _materialId = materialId;
     private readonly int _materialCount = materialCount;
