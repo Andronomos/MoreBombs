@@ -4,17 +4,10 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Items;
 
-public enum BombType
+public class MoreBombsItem(string name, int materialId, int materialCount, ModProjectile projectile, BombType type) : ModItem
 {
-    Normal,
-    Sticky,
-    Bouncy
-}
-
-public class MoreBombsItem(string name, int itemId, int itemCount, ModProjectile projectile, BombType type) : ModItem
-{
-    private readonly int _materialId = itemId;
-    private readonly int _materialCount = itemCount;
+    private readonly int _materialId = materialId;
+    private readonly int _materialCount = materialCount;
     private readonly ModProjectile _projectile = projectile;
     private readonly BombType _type = type;
 
