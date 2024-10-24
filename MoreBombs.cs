@@ -1,3 +1,4 @@
+using MoreBombs.Content;
 using MoreBombs.Content.Items;
 using MoreBombs.Content.Projectiles;
 using Terraria.ID;
@@ -11,6 +12,7 @@ public class MoreBombs : Mod
     {
         //This bomb only exists because you can't apply the config settings to the vanilla dirt bomb
         CreateBomb("Dirt", ItemID.DirtBlock, TileID.Dirt, DustID.Dirt);
+        CreateDynamite("Dirt", ItemID.DirtBlock, TileID.Dirt, DustID.Dirt);
 
         CreateBomb("Snow", ItemID.SnowBlock, TileID.SnowBlock, DustID.SnowBlock);
         CreateBomb("Ash", ItemID.AshBlock, TileID.Ash, DustID.Ash);
@@ -40,17 +42,38 @@ public class MoreBombs : Mod
         string stickyBombName = $"Sticky{bombName}";
         string bouncyBombName = $"Bouncy{bombName}";
 
-        MoreBombsProjectile projectile = new(bombName, tileId, dustId, BombType.Normal);
+        BlockExplosiveProjectile projectile = new(bombName, tileId, dustId, ExplosiveType.Bomb, ExplosiveBehaviour.Normal);
         AddContent(projectile);
-        MoreBombsItem bombItem = new(bombName, itemId, itemCount, projectile, BombType.Normal);
+        BlockBombItem bombItem = new(bombName, itemId, itemCount, projectile, ExplosiveType.Bomb, ExplosiveBehaviour.Normal);
         AddContent(bombItem);
 
-        MoreBombsProjectile stickyProjectile = new(stickyBombName, tileId, dustId, BombType.Sticky);
+        BlockExplosiveProjectile stickyProjectile = new(stickyBombName, tileId, dustId, ExplosiveType.Bomb, ExplosiveBehaviour.Sticky);
         AddContent(stickyProjectile);        
-        AddContent(new MoreBombsItem(stickyBombName, bombItem.Type, 1, stickyProjectile, BombType.Sticky));
+        AddContent(new BlockBombItem(stickyBombName, bombItem.Type, 1, stickyProjectile, ExplosiveType.Bomb, ExplosiveBehaviour.Sticky));
 
-        MoreBombsProjectile bouncyProjectile = new(bouncyBombName, tileId, dustId, BombType.Bouncy);
+        BlockExplosiveProjectile bouncyProjectile = new(bouncyBombName, tileId, dustId, ExplosiveType.Bomb, ExplosiveBehaviour.Bouncy);
         AddContent(bouncyProjectile);
-        AddContent(new MoreBombsItem(bouncyBombName, bombItem.Type, 1, bouncyProjectile, BombType.Bouncy));
+        AddContent(new BlockBombItem(bouncyBombName, bombItem.Type, 1, bouncyProjectile, ExplosiveType.Bomb, ExplosiveBehaviour.Bouncy));
+    }
+
+
+    public void CreateDynamite(string name, int itemId, ushort tileId, short dustId, int itemCount = 25)
+    {
+        string bombName = $"{name}Dynamite";
+        string stickyBombName = $"Sticky{bombName}";
+        string bouncyBombName = $"Bouncy{bombName}";
+
+        BlockExplosiveProjectile projectile = new(bombName, tileId, dustId, ExplosiveType.Dynamite, ExplosiveBehaviour.Normal);
+        AddContent(projectile);
+        BlockBombItem bombItem = new(bombName, itemId, itemCount, projectile, ExplosiveType.Dynamite, ExplosiveBehaviour.Normal);
+        AddContent(bombItem);
+
+        BlockExplosiveProjectile stickyProjectile = new(stickyBombName, tileId, dustId, ExplosiveType.Dynamite, ExplosiveBehaviour.Sticky);
+        AddContent(stickyProjectile);
+        AddContent(new BlockBombItem(stickyBombName, bombItem.Type, 1, stickyProjectile, ExplosiveType.Dynamite, ExplosiveBehaviour.Sticky));
+
+        BlockExplosiveProjectile bouncyProjectile = new(bouncyBombName, tileId, dustId, ExplosiveType.Dynamite, ExplosiveBehaviour.Bouncy);
+        AddContent(bouncyProjectile);
+        AddContent(new BlockBombItem(bouncyBombName, bombItem.Type, 1, bouncyProjectile, ExplosiveType.Dynamite, ExplosiveBehaviour.Bouncy));
     }
 }

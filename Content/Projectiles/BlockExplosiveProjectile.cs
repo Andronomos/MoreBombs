@@ -1,4 +1,5 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Microsoft.CodeAnalysis.CSharp.Syntax;
+using Microsoft.Xna.Framework;
 using MoreBombs.Content.Items;
 using Terraria;
 using Terraria.Audio;
@@ -7,7 +8,7 @@ using Terraria.ModLoader;
 
 namespace MoreBombs.Content.Projectiles;
 
-public class BlockBombProjectile(string name, ushort tileId, short dustId, BombType type) : ModProjectile
+public class BlockExplosiveProjectile(string name, ushort tileId, short dustId, ExplosiveType type, ExplosiveBehaviour behaviour) : ModProjectile
 {
     private const int DustParticleCount = 30;
     private const int BlockParticleCount = 80;
@@ -22,33 +23,32 @@ public class BlockBombProjectile(string name, ushort tileId, short dustId, BombT
     {
         switch (type)
         {
-            case BombType.Normal:
+            case ExplosiveType.Bomb:
                 Projectile.CloneDefaults(ProjectileID.DirtBomb);
                 break;
-
-            case BombType.Sticky:
-                Projectile.CloneDefaults(ProjectileID.DirtStickyBomb);
-                Projectile.tileCollide = true;
-                break;
-
-            case BombType.Bouncy:
-                Projectile.CloneDefaults(ProjectileID.BouncyBomb);
+            case ExplosiveType.Dynamite:
+                Projectile.CloneDefaults(ProjectileID.Dynamite);
                 break;
         }
+
+        if (behaviour == ExplosiveBehaviour.Sticky)
+        {
+            Projectile.tileCollide = true;
+        }        
 
         Projectile.timeLeft = 180;
     }
 
     public override bool OnTileCollide(Vector2 oldVelocity)
     {
-        if (type == BombType.Sticky)
+        if (behaviour == ExplosiveBehaviour.Sticky)
         {
             Projectile.velocity = Vector2.Zero;
             Projectile.aiStyle = 0;
             return false;
         }
 
-        if (type == BombType.Bouncy)
+        if (behaviour == ExplosiveBehaviour.Bouncy)
         {
             if (Projectile.velocity.X != oldVelocity.X)
             {
@@ -98,8 +98,17 @@ public class BlockBombProjectile(string name, ushort tileId, short dustId, BombT
             return;
         }
 
-        (int minWidth, int maxWidth) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionWidth);
-        (int miHeight, int maxHeight) = CalculateRadiusValues(ModContent.GetInstance<Config>().ExplosionHeight);
+        (int minWidth, int maxWidth) = type switch
+        {
+            ExplosiveType.Bomb => CalculateRadiusValues(ModContent.GetInstance<Config>().BombExplosionWidth),
+            ExplosiveType.Dynamite => CalculateRadiusValues(ModContent.GetInstance<Config>().DynamiteExplosionWidth)
+        };
+
+        (int miHeight, int maxHeight) = type switch
+        {
+            ExplosiveType.Bomb => CalculateRadiusValues(ModContent.GetInstance<Config>().BombExplosionHeight),
+            ExplosiveType.Dynamite => CalculateRadiusValues(ModContent.GetInstance<Config>().DynamiteExplosionHeight)
+        };
 
         for (int x = -minWidth; x < maxWidth; x++)
         {
