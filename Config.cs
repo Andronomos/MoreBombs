@@ -7,6 +7,10 @@ public class Config : ModConfig
 {
     public override ConfigScope Mode => ConfigScope.ServerSide;
 
+    [Header("General")]
+    [DefaultValue(true)]
+    public bool CircleExplosion;
+
     [Header("Bombs")]
     [DefaultValue(9)]
     public int BombExplosionWidth;
@@ -14,16 +18,10 @@ public class Config : ModConfig
     [DefaultValue(9)]
     public int BombExplosionHeight;
 
-    [DefaultValue(true)]
-    public bool BombCircleExplosion;
-
     [Header("Dynamite")]
-    [DefaultValue(9)]
+    [DefaultValue(15)]
     public int DynamiteExplosionWidth;
 
-    [DefaultValue(9)]
-    public int DynamiteExplosionHeight;
-
-    [DefaultValue(true)]
-    public bool DynamiteCircleExplosion;
+    [DefaultValue(15)]
+    public int DynamiteExplosionHeight;    
 }
